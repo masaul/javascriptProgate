@@ -1,0 +1,19 @@
+==== Syntax ====
+
+# const nameFunct = function() {
+  };                                      => membuat fungsi
+# nameFunct();                            => memanggil sebuah fungsi tanpa parameter
+# () =>                                   => mendefinisikan fungsi. pengganti function() di ES6
+# (parameter) =>                          => mendefinisikan fungsi menggunakan parameter
+# nameFuct(nilai);                        => memanggil sebuah fungsi menggunakan nilai
+# return nilai;                           => mengembalikan sebuah nilai
+# getMax *                                => menentukan angka tertinggi
+
+
+
+
+
+==== Pembahasan ====
+++ nilai const diletakkan didalam fungsi tidak apa apa. kalau diletakkan di luar fungsi akan erorr. begitu juga dengan perulangan for ataupun while.
+++ nilai const harus 1 setiap jenis. semisal membuat variable cukup 1 saja. jika ada variable dan fungsi, maka masing2 harus diberi const.
+++ untuk membuat getMax harus dideklarasikan terlebih dahulu.
