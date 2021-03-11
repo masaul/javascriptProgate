@@ -21,6 +21,7 @@
 # instance.nameMethod()                                         => memanggil sebuah method yang ada didalam class
 # class nameClassWarisan extends nameClassAwal                  => membuat class inheritance
 # return this.nameMethodInduk                                   => mengembalikan nilai 
+# super(parameter dari class induk);                            => constructor anak memanggil constructor class induk
   
   
   
@@ -38,6 +39,10 @@
 ++ Inheritance adalah cara membuat class baru berdasarkan class yang sudah ada. Misalnya, bila class Dog diwariskan dari class Animal, 
    class Dog juga akan memiliki semua method yang didefinisikan dalam class Animal.
 ++ Saat membuat class menggunakan inheritance, gunakan extends. Agar class Dog dapat menerima warisan data dari class Animal, tulis class Dog extends Animal
-++ Class Dog akan mewarisi semua method class Animal. Karena itu, meskipun tidak ada method yang dideklarasikan dalam class Dog, class ini dapat menggunakan method info yang didefinisikan dalam class Animal.
+++ Class Dog akan mewarisi semua method class Animal. Karena itu, meskipun tidak ada method yang dideklarasikan dalam class Dog, 
+   class ini dapat menggunakan method info yang didefinisikan dalam class Animal.
 ++ Method class anak yang hanya didefinisikan dalam class anak tidak dapat dipanggil dari class induk
-
+++ Bila method dengan nama yang sama seperti method dalam class induk didefinisikan dalam class anak, maka method class anak yang akan digunakan. 
+   Ini karena method class anak menimpa method class induk, hal ini disebut overriding.
+++ Code super() dalam constructor class anak akan memanggil constructor class induk. Karena itu, 
+   kita harus memberikan argument di antara () milik super(), sehingga constructor class induk dapat menerima argument tersebut.
