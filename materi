@@ -1,2 +1,54 @@
-menjalankan javascript      => console.log('Hello')
+Javascript harus dikasih ; di belangkang code.
+
+==== Syntax ====
+# menjalankan *             => console.log('Hello');
+# Komentar *                => //
+# let nameVar = nilai       => mendeklarasikan variable
+# const nameVar = nilai     => mendeklarasikan variable yang bersifat tetap tidak bisa diubah atau di update
+# ` ${nameVar} `            => menggabungkan string dgn namaVar menggunakan template literal (menggunakan backtik `)
+# if (kondisi1) {
+  }                         => mendklarasikan sebuah percabangan if
+# ===                       => operator pembanding(samadengan)
+# !==                       => operator pembanding(tidak samadengan)
+# else{
+  }                         => mendeklarasikan sebuah bercabangan else. jika kondisi semua salah
+# else if (kondisi2) {
+ }                          => mendklarasikan sebuah percabangan if jika salah
+# &&                        => operator logika and
+# ||                        => operator logika atau
+# switch (kondisi) {
+  }                         => berjalan seperti percabangan. 
+# case (nilai):             => untuk menentukan code yang akan dijalankan. 
+# break;                    => untuk memberhentikan setiap code yang dijalankan case.
+# default:                  => memmiliki fungsi seperti else. yang berjalan didalam switch.
+
+
+=== Penjelasan ===
+++  didalam console.log, bisa dikasih string maupun integer. dan bisa dibuat operator matematika. contoh : console.log(5+5); atau console.log("5+5");
+++ operator logika : (+, -, *, /, %, //)
+++ jika mengupdate variable, tidak usah pakai syntax let. cukup sekali saja. contoh : (let number = 1;) ketika diupdate cukup (number = 1000;)
+++ variable juga bisa diupdate menggunakan nilainya. contoh (let number = 5;) menjadi (number = number + 4;) maka hasil updatannya adalah 9
+++ jadi template literal adalah pengganti tanda + untuk menggabungkan sebuah string. template literal harus berada didalam string yang berupa backtik. contoh console.log(`halo ${nameVar}`);
+++ di kondisi switch disini dengan nameVar yang di tentutkan. 
+    contoh : const color : "red"; 
+             switch (color) {
+              .....
+             }
+++ case inni akan berjalan jika berada di dalam switch. case untuk menentukan kode nya. contoh : case "red"
+    contoh : const color : "red"; 
+             switch (color) {
+                case "red":
+                  console.log("ini warna merah");
+                case "kuning":
+                  console.log("ini warna kuning");
+                  break;
+                default:
+                  console.log("tidak ada warna yang sama");
+                  break;
+             }
+++ jika breaknya hanya ada di case yang kedua, maka code yang pertama akan dijalankan juga. jadi outpunya nanti ada 2. jika break diletakkan disetiap case. maka 
+   case yang dijalankan hanyalah code case yang benar atau samadengan nilai variable yang sudah ditentukan didalam switch.
+
+
+
 
