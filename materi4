@@ -1,0 +1,43 @@
+==== Syntax ====
+# const nameVarObjek{
+    property1 : nilai, 
+    nameVarFunct : () =>{
+      code ....
+    }
+  };                                                            => fungsi didalam objek
+# nameVarObjek.nameVarFunct();                                  => memanggil funsgi didalam objek
+# class nameClass{
+  }                                                             => mendefinisikan class
+# const nameInstance = new nameClass()                          => membuat instance baru
+# constructor(){
+  }                                                             => memberikan nilai awal ke instance baru
+# this.propertyName = nilai                                     => menambahkan oproperty kedalam constructor
+# instance.property                                             => memanggil sebuah property yang didalam constructor menggunakan instance.
+# constructor(parameter1,...,parameterN){
+  }                                                             => memberikan nilai awal ke instance baru menggunakan parameter
+# const nameInstance = new nameClass(parameter1,...,parameterN) => membuat instance menggunakan argumen
+# nameMethod(){
+  }                                                             => membuat method dalam class
+# instance.nameMethod()                                         => memanggil sebuah method yang ada didalam class
+# class nameClassWarisan extends nameClassAwal                  => membuat class inheritance
+# return this.nameMethodInduk                                   => mengembalikan nilai 
+  
+  
+  
+  
+  
+==== Penjelasan ====
+++ jika menggunakan class. nama variable class harus diawali dengan huruf kapital.
+++ Object dibuat dari class yang disebut instance. Instance dari class "Animal" disebut "instance Animal".
+++ Untuk menambahkan constructor ke class, tulis constructor() { } di dalam tanda kurung kurawal {} class Animal.
+++ Code yang ditulis disana akan dipanggil saat instance dibuat. Hal penting untuk diingat adalah code akan dipanggil untuk setiap instance. 
+   Karena new Animal() dipanggil dua kali dalam gambar dibawah ini, konten dalam constructor akan dipanggil untuk keduanya.
+++ jika membuat method, harus didalam {} class.
+++ Saat Anda ingin menggunakan nilai instance didalam method, tulis this.propertyName, menggunakan nilai khusus this.
+++ Anda juga dapat memanggil method dalam method lain. method lain dalam class yang sama dapat digunakan dengan menuliskan this.nameMethod() dalam method tersebut.
+++ Inheritance adalah cara membuat class baru berdasarkan class yang sudah ada. Misalnya, bila class Dog diwariskan dari class Animal, 
+   class Dog juga akan memiliki semua method yang didefinisikan dalam class Animal.
+++ Saat membuat class menggunakan inheritance, gunakan extends. Agar class Dog dapat menerima warisan data dari class Animal, tulis class Dog extends Animal
+++ Class Dog akan mewarisi semua method class Animal. Karena itu, meskipun tidak ada method yang dideklarasikan dalam class Dog, class ini dapat menggunakan method info yang didefinisikan dalam class Animal.
+++ Method class anak yang hanya didefinisikan dalam class anak tidak dapat dipanggil dari class induk
+
