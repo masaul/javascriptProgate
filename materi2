@@ -1,0 +1,25 @@
+==== Syntax ====
+# while (kondisi) {
+  }                                                 => perulangan sesuai dengan kondisi   
+# for(variable; kondisi; update){
+  }                                                 => perulangan for  
+# const nameVar = [nilai1, nilai2, nilai3]          => array atau biasa disebut list jika dipython
+# nameVar.length                                    => menentukan jumlah yang didalam array
+# const nameVar={propety1:nilai1, property2:nilai2} => membuat object. seperti dictionary dalam python
+# nameVar.propertyName = nilai baru                 => mengupdate sebuah object
+# const nameVar = [{'num':10, 'nama':'aul'}, 
+                   {'num':50, 'nama':'hai'}]        => membuat object didalam array. atau membuat dicttionary didalam list
+# const nameVar={propety1:nilai1, property2: 
+                {propety1:nilai1, property2:nilai2}}=> Membuat objek bersarang.
+
+
+==== Pembahasan ====
+
+++ ketika menggunakan looping while, jangan lupa membuat stop kondisinya, contoh (number += 1;) nanti akan berjalan 1 per satu sampai kondisi true.
+++ contoh loop for. for(let num = 1; num <= 10; num +=1)
+++ untuk bagian update yang berada di looping for, num += 1 bisa diganti dengan num++. jika pengurangan aslinya num -= 1 bisa disingkat menjadi num--
+++ index array dimuali dari angka 0 
+++ untuk mendapatkan nilai yang ada diproperty object, menggunakan nameVar kemudian nama proprtynya. contoh (console.log(item.color);)
+++ objek bisa juga dilakukan didalam array. array[ {objec}, {objeck} ]
+++ untuk mengakses objek didalam array dengan cara (console.log(nameVar[index].nameProperty);) contoh : console.log(color[1].colorEye);
+++ untuk mengakses objek bersarang dengan cara console.log(nameVar.propertyNameA.propertyNameB); . contoh : console.log(color.eye.colorEye);
