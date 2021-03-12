@@ -1,0 +1,40 @@
+==== Penjelasan ====
+++ Dalam JavaScript, function dapat diteruskan sebagai argument. Function yang diteruskan sebagai argument disebut callback function.
+
+++ Function dipanggil dengan menempatkan () setelah nama function. Tanpa (), function hanya akan menunjukkan definisinya. Karena itu, seperti yang dapat Anda lihat di kedua gambar dibawah, memanggil dan meneruskan function ditulis secara berbeda.
+    Contoh :  const printKen = () => {
+                console.log("Ninja Ken");
+              };
+
+              const call = (callback) => {
+                console.log("Memanggil function callback.");
+                callback();
+              };
+              call(printKen);
+
+++ Sebelumnya, kita sudah belajar cara meneruskan callback function yang telah didefinisikan, namun function juga dapat didefinisikan langsung didalam argument.
+    Contoh :  const printKen = () => {
+                console.log("Ninja Ken");
+              };
+              const call = (callback) => {
+                console.log("Memanggil callback function.");
+                callback();
+              };
+              call(printKen);
+              call(() => {
+                console.log("Guru Domba");
+              });
+              
+++ Seperti halnya function biasa, callback function juga dapat menerima argument.
+    Contoh :  const call = (callback) => {
+                callback("Ninja Ken", 14);
+              };
+
+              call((name, age) => {
+                console.log(`${name} berusia ${age} tahun.`);
+              });
+
+
+
+
+
