@@ -1,0 +1,46 @@
+==== Syntax ====
+# export default nameClass;                               => memperbolehkan nameClass digunakan difile lain
+# import nameClass from "./nameFile";                     => mendefinisikan class difile lain.
+# export default nameVar;                                 => memperbolehkan nameVar digunakan difile lain
+# import nameVar from "./nameFile";                       => mendefinisikan variable difile lain.
+# import { nameVar1, nameVar2 } from "./fileName";        => membuat import bernama
+# export { nameVar1, nameVar2 };                          => membuat eksport bernama.
+# "./nameFIle/nameFileJS";                                => membuat jalur relatif
+# "../nameFIle/nameFileJS";                               => membuat jalur relatif keluar dari 1 direktori
+# import nameConst from "namePackage";                    => membuat paket digunakan untuk mengubah sesuatu
+# nameConst.value()                                       => memanggil import modul
+# import chalk from "chalk";                              => memanggil package untuk warna teks
+# chalk.yellow() atau chalk.bgCyan()                      => text akan berubah menjadi kuning
+# import readlineSycn from "readline-sync";               => memanggil package untuk memasukkan inputan dari user
+# readlineSync.question(pertanyaan);                      => memanggil package
+# questionInt                                             => inputan user bernilai integer
+
+
+
+
+==== Penjelasan ====
+++ Dalam latihan sebelumnya, kesalahan terjadi setelah Anda memisahkan file. Hal ini terjadi karena nilai yang diperlukan untuk file dihapus saat Anda melakukan pembagian code ke file yang berbeda.
+   Dalam contoh di bawah ini, pesan error ditampilkan karena class Animal tidak ada di dalam dog.js.
+++ mari kita buat agar class Animal dalam animal.js dapat digunakan dalam file lain. Setelah mendefinisikan class, 
+   tulis export default nameClass untuk meng-export class dan memungkinkannya untuk diteruskan ke file yang berbeda.
+++ mari kita buat agar class Animal dalam animal.js dapat digunakan dalam file lain. Setelah mendefinisikan class, 
+   tulis export default nameClass untuk meng-export class dan memungkinkannya untuk diteruskan ke file yang berbeda.
+++ Meskipun kita berlatih meng-export class, namun bukan hanya class yang dapat kita export. Semua jenis nilai seperti string, integer, bahkan function dapat di export. Saat meng-export, 
+   export default constantName ditulis seperti yang dapat Anda lihat di bawah ini. Saat meng-import, import constantName from "./fileName" harus ditulis.
+++ Statement export default disebut default export. Dengan export default, saat file di-import, export default value akan secara otomatis di-import. Karena itu, nama nilai saat meng-export dan meng-import code dapat berbeda.
+++ Catatan tentang Export Default Export default hanya dapat digunakan untuk satu nilai dalam satu file. Karena nilai export default akan secara otomatis di-import saat file tersebut di-import,
+   maka hanya satu nilai yang diperbolehkan. Jika Anda ingin meng-export beberapa nilai, gunakan export bernama yang akan kita bahas di slide berikutnya.
+++ Seperti yang dapat Anda lihat di bawah ini di sebelah kiri, export bernama di-export dengan menuliskan nama di dalam {} (tanda kurung kurawal) tanpa menuliskan default.
+   Saat meng-import nilai export bernama, tentukan nama export tersebut di file yang akan menerimanya. Nilai yang Anda import dapat ditentukan dengan menulis import { nameVar } from "./fileName" menggunakan {}.
+++ Tidak seperti export default, export bernama dapat meng-export beberapa nilai. Seperti yang ditunjukkan di sebelah kiri, menulis export { name1, name2 } akan memungkinkan Anda membuat beberapa export bernama dari satu file. 
+   Beberapa import juga dapat dibuat bersamaan dengan menggunakan koma untuk memisahkan nilai-nilai tersebut.
+++ Sejauh ini, Anda telah menggunakan ./fileName untuk menentukan file yang mau di-import. Code ini disebut jalur relatif karena fungsinya adalah untuk menunjukkan jalur yang dapat menghubungkan satu file ke file yang lain.
+   Seperti yang dapat Anda lihat disebelah kanan, jalur menuju ke file "./dogData" sudah dideklarasikan. Jalur relatif ini menunjukkan posisi menuju dogData.js dari posisi script.js.
+++ Tanda jalur relatif ./ dengan satu titik berarti kita membuat jalur untuk keluar selangkah ke direktori dimana file yang memiliki jalur relatif tersebut disimpan. Seperti contoh dikanan bawah. 
+   Jika kita menulis "./dogData" di file script.js, maka kita membuat jalur relatif yang mengarahkan code untuk keluar selangkah dari script.js ke direktori src, dan kemudian masuk ke file dogData.js.
+++ Jika Anda mau keluar dari satu direktori, gunakan "../" dengan dua titik. Pelajari gambar di kiri, saat meng-import "dog.js" dari direktori class ke "dogData.js" di direktori data, seperti digambar kiri. Untuk peng-codean nya bisa dipelajari dari gambar sebelah kanan.
+++ Setelah meng-import, Anda akan dapat menggunakan paket dalam file. Paket chalk memungkinkan Anda mengubah warna teks. Seperti yang ditunjukkan di sebelah kiri, Anda dapat mengubah warna teks dengan mudah dengan meneruskan string ke method paket seperti chalk.yellow() dan chalk.bgCyan().
+++ Dengan mengimport paket readline-sync, Anda akan dapat memasukkan nilai ke dalam console dan menggunakan nilai tersebut dalam program Anda. Caranya, import paket seperti yang ditunjukkan digambar sebelah kiri, lalu tulis readlineSync.question(pertanyaan). 
+   Saat pertanyaan di-print, code akan berhenti hingga nilai yang berupa string dimasukkan.
+++ Nilai input dapat diberikan untuk constant dan variable dalam program Anda. Seperti yang dapat Anda lihat digambar sebelah kiri, code readlineSync.question dapat diberikan untuk constant, sehingga nilai input akan disimpan ke constant tersebut.
+   Dalam kasus ini, nilai input akan disimpan dalam constant name.
